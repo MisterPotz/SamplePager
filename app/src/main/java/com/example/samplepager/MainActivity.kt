@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val sectionsPagerAdapter = SectionsPagerAdapter(layoutInflater)
-        val viewPager: ViewPager2= binding.viewPager
+        val viewPager: ViewPager2 = binding.viewPager
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = binding.tabs
 
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+                .setAction("Action", null).show()
         }
         val tab1 = resources.getString(R.string.tab_text_1)
         val tab2 = resources.getString(R.string.tab_text_2)
