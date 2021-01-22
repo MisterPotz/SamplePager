@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/survey_question"
+        android:id="@+id/title_screen"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -18,10 +18,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3"
-        tools:text="Some question?" />
+        android:text="some text" />
 
     <FrameLayout
-        android:id="@+id/survey_content"
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
@@ -30,27 +30,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/survey_question">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/survey_checkbox_recycler"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="top"
-            android:visibility="gone"
-            />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/survey_checkbox_recycler1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="top"
-            android:visibility="gone"
-            />
-
+        app:layout_constraintTop_toBottomOf="@id/title_screen">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/survey_answer_input"
+            android:id="@+id/input_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="top"
@@ -60,7 +43,7 @@
             tools:visibility="visible">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/survey_question_edit"
+                android:id="@+id/edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionDone"
